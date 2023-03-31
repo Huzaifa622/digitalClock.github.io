@@ -6,12 +6,14 @@ function showTime(){
     let h = date.getHours();
     let m = date.getMinutes();
     let s = date.getSeconds();
-    document.getElementById('ampm').innerText='PM';
+    document.getElementById('ampm').innerText='AM';
     if(h==0){
         h = 12;
-        document.getElementById('ampm').innerText='AM';
-    }else if(h > 12){
+        
+    }
+    if(h > 12){
         h = h-12;
+        document.getElementById('ampm').innerText='PM';
     }
     document.getElementById('hours').innerText = h;
         document.getElementById('Min').innerText = m;
